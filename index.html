@@ -69,6 +69,15 @@
         .clean-shadow {
             box-shadow: 0 10px 40px -10px rgba(14, 165, 233, 0.15);
         }
+        
+        @keyframes pulse-whatsapp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .animate-pulse-wp {
+            animation: pulse-whatsapp 2s infinite;
+        }
     </style>
 
     <script type="application/ld+json">
@@ -412,6 +421,15 @@
             </div>
         </div>
     </footer>
+
+    <!-- Botão Flutuante do WhatsApp -->
+    <a href="https://wa.me/5551999999999?text=Olá!%20Encontrei%20a%20Magia%20da%20Limpeza%20no%20Google%20e%20gostaria%20de%20tirar%20uma%20dúvida." 
+       target="_blank" 
+       rel="noopener noreferrer" 
+       class="fixed bottom-6 right-6 md:bottom-8 md:right-8 bg-[#25D366] hover:bg-[#128C7E] text-white w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center text-3xl md:text-4xl shadow-2xl transition-all duration-300 hover:scale-110 z-[90] animate-pulse-wp"
+       aria-label="Falar conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
 
 </body>
 </html>
