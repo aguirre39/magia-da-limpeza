@@ -163,7 +163,7 @@
                     <a href="#produtos" class="text-gray-600 hover:text-brand-pink font-medium transition">Nossos Produtos</a>
                     <a href="#localizacao" class="text-gray-600 hover:text-brand-pink font-medium transition">Onde Estamos</a>
                     <!-- Target _blank para mapa, botão com touch target adequado -->
-                    <a href="https://maps.google.com/?q=Canoas+RS" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-pink-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
+                    <a href="https://maps.app.goo.gl/RibtJe6Uz2WQZ7jNA" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-pink-700 text-white px-6 py-2.5 rounded-full font-semibold transition-all shadow-md hover:shadow-lg flex items-center gap-2">
                         <i class="fa-solid fa-location-dot"></i>
                         Como Chegar
                     </a>
@@ -171,10 +171,22 @@
                 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button class="text-gray-600 hover:text-clean-600 p-2 focus:outline-none" aria-label="Abrir menu">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-clean-600 p-2 focus:outline-none" aria-label="Abrir menu">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </button>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 absolute w-full shadow-lg transition-all duration-300 origin-top">
+            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
+                <a href="#produtos" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-brand-pink hover:bg-pink-50 transition-colors">Nossos Produtos</a>
+                <a href="#localizacao" class="mobile-link block px-4 py-3 rounded-xl text-base font-medium text-gray-700 hover:text-brand-pink hover:bg-pink-50 transition-colors">Onde Estamos</a>
+                <a href="https://maps.app.goo.gl/RibtJe6Uz2WQZ7jNA" target="_blank" rel="noopener noreferrer" class="mobile-link mt-4 w-full bg-brand-pink hover:bg-pink-700 text-white px-6 py-3 rounded-full font-semibold transition-all shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Como Chegar
+                </a>
             </div>
         </div>
     </header>
@@ -217,23 +229,27 @@
                         </div>
                     </div>
                     
-                    <!-- Imagem Hero com a Identidade Visual -->
-                    <div class="relative mx-auto w-full max-w-md lg:max-w-full flex justify-center">
-                        <div class="absolute -inset-4 bg-gradient-to-tr from-brand-light/30 to-brand-pink/20 rounded-[3rem] transform rotate-3 -z-10"></div>
-                        <img src="magia-da-limpeza-canoas.jpeg" 
+                    <!-- Imagem Hero com a Identidade Visual Ajustada (Mais limpa e profissional) -->
+                    <div class="relative mx-auto w-full max-w-lg lg:max-w-xl flex justify-center mt-8 lg:mt-0">
+                        <!-- O background bagunçado foi removido para focar na limpeza da imagem com uma sombra profunda -->
+                        <img src="img/magia-da-limpeza-3m-alquimis-canoas.webp" 
                              alt="Identidade Visual Magia da Limpeza Canoas - Produtos de Limpeza" 
-                             class="rounded-[2.5rem] shadow-2xl w-full max-w-md object-cover border-4 border-white"
+                             class="rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(11,22,86,0.3)] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
                              fetchpriority="high">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Faixa de Marcas Parceiras (Sinais E-E-A-T) -->
-        <section class="py-8 bg-white border-b border-gray-100 shadow-sm relative z-10">
-            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
-                <h2 class="sr-only">Produtos de Limpeza Profissionais - Marcas 3M e Alquimis</h2>
-                <img src="image_d43683.png" alt="Marcas Parceiras - 3M e Alquimis" class="max-h-24 md:max-h-32 w-auto object-contain drop-shadow-sm">
+        <!-- Faixa de Marcas Parceiras (Otimizado para AIO e E-E-A-T Local) -->
+        <section aria-labelledby="marcas-autoridade" class="py-12 bg-white relative z-20 -mt-12">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+                
+                <!-- Título Oculto (Semântica AIO): Cria a relação entre a Entidade Local (Canoas) e as Marcas Fortes (3M) -->
+                <h2 id="marcas-autoridade" class="sr-only">
+                    Fornecedora e Distribuidora autorizada de marcas de limpeza profissional: 3M e Alquimis em Canoas, RS.
+                </h2>
+
             </div>
         </section>
 
@@ -278,45 +294,108 @@
                     <p class="text-lg text-gray-600 max-w-2xl mx-auto">Navegue pelas nossas categorias. Visite nossa loja para consultar a disponibilidade e adquirir as melhores soluções de limpeza.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     
-                    <!-- Categoria 1 (Foco Trends: Detergente, Desinfetante, Amaciante) -->
-                    <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow">
-                        <div class="h-64 overflow-hidden relative">
-                            <img src="https://placehold.co/800x600/ffffff/0ea5e9?text=Detergentes+e+Desinfetantes"
-                                 alt="Detergentes e Desinfetantes em Canoas"
-                                 loading="lazy"
-                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
+                    <!-- Categoria 1: Dia a Dia (Com Carrossel) -->
+                    <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow flex flex-col h-full">
+                        
+                        <!-- Carrossel Nativo Tailwind (Scroll Snap) -->
+                        <div class="relative h-72 w-full overflow-hidden bg-white">
+                            <!-- Container de Scroll -->
+                            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                
+                                <!-- Slide 1 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1585652597287-9cb8e5c833c8?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Detergente Neutro em Canoas" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+                                
+                                <!-- Slide 2 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1584820927498-cafe8c1c969b?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Desinfetante Floral" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Amaciante 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <!-- Indicadores de Rolagem Visuais (Dots) -->
+                            <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-2 pointer-events-none">
+                                <div class="w-2 h-2 rounded-full bg-brand-pink/80"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
+                            </div>
+                            <!-- Dica de usabilidade para desktop -->
+                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none opacity-0 group-hover:opacity-50 transition-opacity">
+                                <div class="bg-white/80 p-2 rounded-full shadow-sm text-gray-500"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Detergentes, Desinfetantes e Dia a Dia</h3>
+
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold text-brand-blue mb-3">Detergentes, Desinfetantes e Dia a Dia</h3>
                             <p class="text-gray-600 mb-6">Tudo que sua casa ou comércio precisa para se manter cheirosa e higienizada com o melhor custo-benefício.</p>
-                            <ul class="space-y-2 mb-8 text-gray-600">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink"></i> <strong>Detergentes</strong> eficientes e econômicos</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink"></i> <strong>Desinfetantes perfumados</strong> de longa duração</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink"></i> <strong>Amaciantes</strong> e multiusos</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-pink"></i> Kits para cozinha e banheiro (rodos e vassouras)</li>
+                            <ul class="space-y-3 mb-8 text-gray-600 flex-grow">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Detergentes</strong> eficientes e econômicos</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Desinfetantes perfumados</strong> de longa duração</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Amaciantes</strong> e multiusos</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span>Kits para cozinha e banheiro (rodos e vassouras)</span></li>
                             </ul>
                         </div>
                     </div>
 
-                    <!-- Categoria 2 (Foco Trends: Limpeza Pesada, Desengraxante, Limpa Porcelanato) -->
-                    <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow">
-                        <div class="h-64 overflow-hidden relative">
-                            <img src="https://placehold.co/800x600/ffffff/14b8a6?text=Limpeza+Pesada"
-                                 alt="Produtos para Limpeza Pesada e Desengraxante"
-                                 loading="lazy"
-                                 class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-105">
-                            <div class="absolute top-4 right-4 bg-pure-500 text-white text-xs font-bold px-3 py-1 rounded-full">Uso Profissional</div>
+                    <!-- Categoria 2: Limpeza Pesada (Com Carrossel) -->
+                    <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow flex flex-col h-full relative">
+                        
+                        <div class="absolute top-4 right-4 bg-pure-500 text-white text-xs font-bold px-3 py-1 rounded-full z-20 shadow-md">Uso Profissional</div>
+
+                        <!-- Carrossel Nativo Tailwind (Scroll Snap) -->
+                        <div class="relative h-72 w-full overflow-hidden bg-white">
+                            <!-- Container de Scroll -->
+                            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                
+                                <!-- Slide 1 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Desengraxante Industrial" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+                                
+                                <!-- Slide 2 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Limpa Porcelanato" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&h=400&q=80" 
+                                         alt="Galão Removedor de Cera 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                </div>
+                            </div>
+                            
+                            <!-- Indicadores de Rolagem Visuais (Dots) -->
+                            <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-2 pointer-events-none">
+                                <div class="w-2 h-2 rounded-full bg-pure-500/80"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
+                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
+                            </div>
+                            <!-- Dica de usabilidade para desktop -->
+                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none opacity-0 group-hover:opacity-50 transition-opacity">
+                                <div class="bg-white/80 p-2 rounded-full shadow-sm text-gray-500"><i class="fa-solid fa-chevron-right"></i></div>
+                            </div>
                         </div>
-                        <div class="p-8">
-                            <h3 class="text-2xl font-bold text-gray-900 mb-3">Limpeza Pesada, Pós-Obra e Especializados</h3>
+
+                        <div class="p-8 flex-grow flex flex-col">
+                            <h3 class="text-2xl font-bold text-brand-blue mb-3">Limpeza Pesada, Pós-Obra e Especializados</h3>
                             <p class="text-gray-600 mb-6">Produtos concentrados para remoção de sujeiras extremas, indicados para empresas, oficinas e construtoras.</p>
-                            <ul class="space-y-2 mb-8 text-gray-600">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pure-500"></i> <strong>Desengraxantes</strong> de alta potência (em alta)</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pure-500"></i> <strong>Limpa porcelanato</strong> e limpa pedras</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pure-500"></i> <strong>Removedor de cera</strong> e manchas difíceis</li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-pure-500"></i> <strong>Detergente concentrado</strong> (Galões de 5L e 20L)</li>
+                            <ul class="space-y-3 mb-8 text-gray-600 flex-grow">
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Desengraxantes</strong> de alta potência (em alta)</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Limpa porcelanato</strong> e limpa pedras</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Removedor de cera</strong> e manchas difíceis</span></li>
+                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Detergente concentrado</strong> (Galões de 5L e 20L)</span></li>
                             </ul>
                         </div>
                     </div>
@@ -340,7 +419,7 @@
                             <i class="fa-solid fa-truck-fast"></i>
                             Varejo e Atacado Local
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua Loja e Distribuidora de Produtos de Limpeza em Canoas RS</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua Loja de Produtos de Limpeza em Canoas RS</h2>
                         <p class="text-blue-100 text-lg mb-8">
                             Venha conferir nossa variedade de perto. Fornecemos soluções tanto para sua casa quanto para abastecer sua empresa com galões econômicos.
                         </p>
@@ -366,7 +445,7 @@
                             </div>
                         </div>
 
-                        <a href="https://maps.google.com/?q=Canoas+RS" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-3">
+                        <a href="https://maps.app.goo.gl/RibtJe6Uz2WQZ7jNA" target="_blank" rel="noopener noreferrer" class="bg-brand-pink hover:bg-pink-600 text-white px-8 py-4 rounded-full font-bold text-lg transition-all inline-flex items-center gap-3">
                             <i class="fa-solid fa-route"></i>
                             Traçar Rota no Google Maps
                         </a>
@@ -374,8 +453,8 @@
 
                     <div class="bg-white p-2 rounded-3xl shadow-2xl">
                         <div class="rounded-2xl overflow-hidden h-96 bg-gray-200 relative flex items-center justify-center">
-                            <img src="https://placehold.co/800x600/e2e8f0/64748b?text=Mapa+de+Canoas+-+Sua+Loja+Aqui" alt="Localização no Mapa" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-                            <a href="https://maps.google.com/?q=Canoas+RS" target="_blank" rel="noopener noreferrer" class="relative z-10 bg-brand-pink hover:bg-pink-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg flex items-center gap-2 transition-all hover:scale-105">
+                            <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?cb_client=maps_sv.tactile&amp;w=900&amp;h=600&amp;pitch=0.5799999999999983&amp;panoid=li0hdv1wJ5W3YGI2ZldiUQ&amp;yaw=159.9" alt="Fachada da Loja Magia da Limpeza no Google Street View" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+                            <a href="https://maps.app.goo.gl/RibtJe6Uz2WQZ7jNA" target="_blank" rel="noopener noreferrer" class="relative z-10 bg-brand-pink hover:bg-pink-600 text-white px-6 py-3 rounded-xl font-bold shadow-lg flex items-center gap-2 transition-all hover:scale-105">
                                 Abrir no App do Maps
                             </a>
                         </div>
@@ -435,7 +514,7 @@
                         <span class="font-extrabold text-2xl tracking-tighter text-brand-pink">limpeza</span>
                     </a>
                     <p class="text-gray-500 mb-6 max-w-sm">
-                        Sua loja e distribuidora contra a sujeira. Produtos de limpeza pesada, detergentes e linha profissional no coração de Canoas, RS.
+                        Sua loja contra a sujeira. Produtos de limpeza pesada, detergentes e linha profissional no coração de Canoas, RS.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-pink-50 text-brand-pink flex items-center justify-center hover:bg-brand-pink hover:text-white transition-colors" aria-label="Instagram">
@@ -486,5 +565,70 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Script para animação automática dos carrosséis -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.snap-x.snap-mandatory');
+            
+            carousels.forEach(carousel => {
+                let scrollAmount = 0;
+                let direction = 1; // 1 para direita, -1 para esquerda
+                const slideWidth = carousel.clientWidth;
+                
+                setInterval(() => {
+                    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
+                    
+                    // Atualiza a quantidade de scroll
+                    scrollAmount += slideWidth * direction;
+                    
+                    // Inverte a direção se chegar ao fim ou ao início
+                    if (scrollAmount >= maxScrollLeft) {
+                        scrollAmount = maxScrollLeft;
+                        direction = -1; // Volta para o início (ou rola para trás se preferir)
+                        // Para voltar instantaneamente ao início, descomente as linhas abaixo e comente as duas acima:
+                        // scrollAmount = 0; 
+                        // direction = 1;
+                    } else if (scrollAmount <= 0) {
+                        scrollAmount = 0;
+                        direction = 1;
+                    }
+
+                    carousel.scrollTo({
+                        top: 0,
+                        left: scrollAmount,
+                        behavior: 'smooth'
+                    });
+                }, 3000); // Rola a cada 3 segundos
+            });
+        });
+
+        // Lógica do Menu Mobile
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuIcon = mobileMenuButton.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            
+            // Alterna o ícone entre hambúrguer e X
+            if (mobileMenu.classList.contains('hidden')) {
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            } else {
+                mobileMenuIcon.classList.remove('fa-bars');
+                mobileMenuIcon.classList.add('fa-xmark');
+            }
+        });
+
+        // Fecha o menu automaticamente ao clicar em um link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuIcon.classList.remove('fa-xmark');
+                mobileMenuIcon.classList.add('fa-bars');
+            });
+        });
+    </script>
 </body>
 </html>
