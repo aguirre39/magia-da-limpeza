@@ -50,13 +50,19 @@
     <!-- Preconnect para fontes e recursos externos (Performance) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://placehold.co" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     
     <!-- Tailwind CSS (Via CDN para este arquivo único) -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- FontAwesome para Ícones Leves -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Preload das Fontes da FontAwesome para evitar atrasos no FCP e garantir font-display -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+    <!-- FontAwesome para Ícones Leves (Carregamento Assíncrono) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <script>
         tailwind.config = {
@@ -89,6 +95,24 @@
     </script>
 
     <style>
+        /* Sobrescrita para garantir font-display: swap no FontAwesome (Lighthouse FCP) */
+        @font-face {
+            font-family: 'Font Awesome 6 Free';
+            font-style: normal;
+            font-weight: 900;
+            font-display: swap;
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.woff2") format("woff2"),
+                 url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-solid-900.ttf") format("truetype");
+        }
+        @font-face {
+            font-family: 'Font Awesome 6 Brands';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.woff2") format("woff2"),
+                 url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/webfonts/fa-brands-400.ttf") format("truetype");
+        }
+
         /* Estilos adicionais para performance e animações sutis */
         html { scroll-behavior: smooth; }
         .glass-nav {
@@ -415,18 +439,18 @@
                             
                             <!-- Indicadores de Rolagem Manuais (Dots - 12 Itens) -->
                             <div class="carousel-dots-container absolute bottom-3 left-0 right-0 flex justify-center flex-wrap gap-2 z-10 px-4">
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 1"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 2"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 3"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 4"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 5"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 6"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 7"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 8"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 9"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 10"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 11"></button>
-                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 12"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 1"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 2"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 3"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 4"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 5"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 6"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 7"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 8"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 9"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 10"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 11"></button>
+                                <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 12"></button>
                             </div>
                         </div>
 
@@ -802,6 +826,12 @@
                 
                 let currentIndex = 0;
                 let autoPlayInterval;
+                let slideWidth = scrollArea.clientWidth;
+
+                // Atualiza a largura em caso de resize da tela para evitar leituras de DOM no scroll
+                window.addEventListener('resize', () => {
+                    slideWidth = scrollArea.clientWidth;
+                }, { passive: true });
 
                 // Atualiza visualmente as bolinhas (dots)
                 const updateDots = (index) => {
@@ -824,7 +854,6 @@
                     currentIndex = index;
                     
                     // A largura do container de scroll nos dá quanto temos que rolar
-                    const slideWidth = scrollArea.clientWidth;
                     scrollArea.scrollTo({
                         left: slideWidth * currentIndex,
                         behavior: 'smooth'
@@ -869,15 +898,21 @@
                 });
 
                 // Atualiza o dot ativo se o usuário rolar manualmente com o dedo (Mobile)
+                let isScrolling = false;
                 scrollArea.addEventListener('scroll', () => {
-                    const scrollPosition = scrollArea.scrollLeft;
-                    const slideWidth = scrollArea.clientWidth;
-                    // Calcula em qual slide estamos baseando-se na posição do scroll
-                    const newIndex = Math.round(scrollPosition / slideWidth);
-                    
-                    if(newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
-                        currentIndex = newIndex;
-                        updateDots(currentIndex);
+                    if (!isScrolling) {
+                        window.requestAnimationFrame(() => {
+                            const scrollPosition = scrollArea.scrollLeft;
+                            // Calcula em qual slide estamos baseando-se na posição do scroll
+                            const newIndex = Math.round(scrollPosition / slideWidth);
+                            
+                            if(newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
+                                currentIndex = newIndex;
+                                updateDots(currentIndex);
+                            }
+                            isScrolling = false;
+                        });
+                        isScrolling = true;
                     }
                 }, { passive: true });
 
