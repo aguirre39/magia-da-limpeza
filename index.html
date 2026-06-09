@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Title Otimizado com base no Trends RS (Primária) -->
+    <!-- Título otimizado com base no Trends RS (Primária) -->
     <title>Loja de Produtos de Limpeza em Canoas RS | Magia da Limpeza</title>
-    <!-- Meta Description com keywords de alta intenção (Distribuidora, Detergente, Desinfetante, Limpeza Pesada) -->
-    <meta name="description" content="Sua loja e distribuidora de produtos de limpeza em Canoas, RS. Encontre detergente, desinfetante perfumado, desengraxante e linha completa para limpeza pesada e profissional.">
+    <!-- Meta Description com keywords de alta intenção (Detergente, Desinfetante, Limpeza Pesada) -->
+    <meta name="description" content="Sua loja física em Canoas para soluções de higiene. Oferecemos desde itens para o dia a dia até a linha industrial e produtos profissionais de limpeza.">
     
     <!-- Open Graph / Redes Sociais e Mensageiros (Facebook, LinkedIn, WhatsApp) - SEO AIO Local -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.magiadalimpeza.com.br/">
     <meta property="og:title" content="Loja de Produtos de Limpeza em Canoas RS | Magia da Limpeza">
-    <meta property="og:description" content="Sua loja e distribuidora de produtos de limpeza em Canoas, RS. Encontre detergente, desinfetante perfumado, desengraxante e linha completa para limpeza pesada e profissional.">
+    <meta property="og:description" content="Sua loja física em Canoas para soluções de higiene. Oferecemos desde itens para o dia a dia até a linha industrial e produtos profissionais de limpeza.">
     <meta property="og:image" content="https://aguirre39.github.io/magia-da-limpeza/img/magia-da-limpeza-canoas.webp">
     <meta property="og:site_name" content="Magia da Limpeza">
     <meta property="og:locale" content="pt_BR">
@@ -21,14 +21,28 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://www.magiadalimpeza.com.br/">
     <meta name="twitter:title" content="Loja de Produtos de Limpeza em Canoas RS | Magia da Limpeza">
-    <meta name="twitter:description" content="Sua loja e distribuidora de produtos de limpeza em Canoas, RS. Encontre detergente, desinfetante perfumado, desengraxante e linha completa para limpeza pesada e profissional.">
+    <meta name="twitter:description" content="Sua loja física em Canoas para soluções de higiene. Oferecemos desde itens para o dia a dia até a linha industrial e produtos profissionais de limpeza.">
     <meta name="twitter:image" content="https://www.magiadalimpeza.com.br/img/magia-da-limpeza-3m-alquimis-canoas.webp">
 
     <!-- Tag Canonical para evitar conteúdo duplicado -->
     <link rel="canonical" href="https://www.magiadalimpeza.com.br/" />
-    <!-- Hreflang para sinalizar idioma e região correta -->
-    <link rel="alternate" hreflang="pt-br" href="https://www.magiadalimpeza.com.br/" />
+    
+    <!-- Google Analytics 4 (GA4) - Recomendado no Checklist SEO Técnico -->
+    <!-- Substitua G-XXXXXXXXXX pelo seu ID de medição -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <!-- Hreflang para sinalizar idioma e região correta (pt-BR conforme ISO 3166-1 Alpha 2) -->
+    <link rel="alternate" hreflang="pt-BR" href="https://www.magiadalimpeza.com.br/" />
     <link rel="alternate" hreflang="x-default" href="https://www.magiadalimpeza.com.br/" />
+
+    <!-- Política de Referrer para Segurança e SEO -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Favicon (Simulado via texto para o ambiente de testes) -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>">
@@ -101,13 +115,18 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "LocalBusiness",
+          "@type": "Store",
           "@id": "https://www.magiadalimpeza.com.br/#loja",
           "name": "Magia da Limpeza",
-          "image": "magia-da-limpeza-canoas.jpeg",
-          "description": "Loja e distribuidora de produtos de limpeza residenciais, comerciais e industriais em Canoas, RS.",
+          "image": "https://www.magiadalimpeza.com.br/img/magia-da-limpeza-3m-alquimis-canoas.webp",
+          "description": "Loja física especializada em soluções de higiene e produtos profissionais de limpeza em Canoas, RS.",
           "url": "https://www.magiadalimpeza.com.br/",
           "telephone": "+5551982057088",
+          "priceRange": "$$",
+          "sameAs": [
+            "https://www.instagram.com/magiadalimpeza",
+            "https://www.facebook.com/magiadalimpeza"
+          ],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Rua Monte Castelo, 1165 - Sala 03, Nossa Sra. das Graças",
@@ -129,30 +148,40 @@
           }
         },
         {
+          "@type": "WebSite",
+          "@id": "https://www.magiadalimpeza.com.br/#website",
+          "url": "https://www.magiadalimpeza.com.br/",
+          "name": "Magia da Limpeza",
+          "publisher": {
+            "@id": "https://www.magiadalimpeza.com.br/#loja"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
           "@type": "FAQPage",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Onde comprar detergente e desinfetante em Canoas RS?",
+              "name": "Onde encontrar produtos profissionais de limpeza em Canoas?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Nossa loja física está localizada na região central de Canoas, RS. Oferecemos a maior variedade de detergentes, desinfetantes perfumados e amaciantes da região com fácil acesso e estacionamento."
+                "text": "Nossa loja física está localizada na região central de Canoas, RS. Oferecemos desde soluções para o dia a dia até a linha industrial, com fácil acesso e estacionamento para clientes."
               }
             },
             {
               "@type": "Question",
-              "name": "Vocês atuam como distribuidora de produtos de limpeza em Canoas RS?",
+              "name": "Vocês atendem empresas e condomínios em Canoas RS?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Sim! Além do varejo para a sua casa, atuamos como fornecedores e distribuidora de produtos de limpeza para empresas, condomínios e indústrias em Canoas."
+                "text": "Sim! Além do varejo para a sua casa, nossa loja fornece insumos de higiene para empresas, condomínios e clínicas, com excelentes opções de tamanhos econômicos."
               }
             },
             {
               "@type": "Question",
-              "name": "Vocês vendem produtos de limpeza pesada e desengraxante para empresas?",
+              "name": "A loja possui linha para limpeza pesada e desengraxantes?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Com certeza. Temos uma linha profissional completa que inclui desengraxante (em alta demanda), detergente concentrado em galões de 5L e 20L, limpa porcelanato e removedor de cera."
+                "text": "Com certeza. Temos uma linha profissional completa de alta performance, incluindo desengraxantes e removedores, ideal para oficinas, construtoras e sujeiras extremas."
               }
             }
           ]
@@ -218,17 +247,17 @@
                     <div class="text-center lg:text-left">
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 text-brand-pink font-semibold text-sm mb-6 border border-pink-100">
                             <i class="fa-solid fa-star text-brand-gold"></i>
-                            Loja e Distribuidora em Canoas, RS
+                            Loja Física em Canoas, RS
                         </div>
                         
                         <!-- Único H1 na página otimizado com as keywords primárias do Trends RS -->
                         <h1 class="text-4xl md:text-5xl lg:text-5xl font-extrabold text-brand-blue leading-tight mb-6">
-                            Produtos de Limpeza em Canoas: <br>
-                            <span class="text-brand-pink">Detergente, Desinfetante e Linha Pesada</span>
+                            Loja de Produtos de Limpeza em Canoas: <br>
+                            <span class="text-brand-pink">Para Casa, Empresa e Limpeza Profissional</span>
                         </h1>
                         
                         <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto lg:mx-0">
-                            Encontre a linha completa para uso doméstico, comercial e industrial. Atendimento direto da melhor loja e distribuidora da região na <strong>Magia da Limpeza</strong>.
+                            Encontre a linha completa de soluções para higienização, desde o uso diário até a linha industrial. Atendimento especializado na sua loja física da <strong>Magia da Limpeza</strong>.
                         </p>
                         
                         <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -262,7 +291,7 @@
                 
                 <!-- Título Oculto (Semântica AIO): Cria a relação entre a Entidade Local (Canoas) e as Marcas Fortes (3M) -->
                 <h2 id="marcas-autoridade" class="sr-only">
-                    Fornecedora e Distribuidora autorizada de marcas de limpeza profissional: 3M e Alquimis em Canoas, RS.
+                    Loja revendedora autorizada de marcas de limpeza profissional: 3M e Alquimis em Canoas, RS.
                 </h2>
 
             </div>
@@ -271,7 +300,7 @@
         <section class="py-16 bg-blue-50/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <!-- H2 lógico seguindo hierarquia e keywords -->
-                <h2 class="sr-only">Por que escolher nossa distribuidora de produtos de limpeza?</h2>
+                <h2 class="sr-only">Por que escolher nossa loja de produtos de limpeza?</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Feature 1 -->
                     <div class="bg-white p-8 rounded-2xl clean-shadow text-center">
@@ -294,124 +323,141 @@
                         <div class="w-16 h-16 bg-blue-100 text-blue-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
                             <i class="fa-solid fa-store"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Comércio e Distribuidora</h3>
-                        <p class="text-gray-600">Sua loja em Canoas com estrutura de atacado e distribuição para empresas. Atendimento focado em resolver seu problema.</p>
+                        <h3 class="text-xl font-bold text-gray-900 mb-3">Atendimento Completo</h3>
+                        <p class="text-gray-600">Sua loja física em Canoas com estrutura para atender desde a sua casa até a sua empresa com excelência.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Seção de Produtos com Keywords Secundárias do Trends -->
+        <!-- Seção de Produtos Unificada -->
         <section id="produtos" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Loja de Produtos de Limpeza Profissional em Canoas</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Navegue pelas nossas categorias. Visite nossa loja para consultar a disponibilidade e adquirir as melhores soluções de limpeza.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nossas Soluções para Limpeza Pesada e do Dia a Dia</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Navegue pelas nossas categorias. Visite nossa loja para consultar a disponibilidade e adquirir as melhores soluções para higiene e conservação.</p>
                 </div>
 
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="max-w-4xl mx-auto">
                     
-                    <!-- Categoria 1: Dia a Dia (Com Carrossel) -->
-                    <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow flex flex-col h-full">
-                        
-                        <!-- Carrossel Nativo Tailwind (Scroll Snap) -->
-                        <div class="relative h-72 w-full overflow-hidden bg-white">
-                            <!-- Container de Scroll -->
-                            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
-                                
-                                <!-- Slide 1 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/e0f2fe/0284c7?text=Detergente+Neutro" 
-                                         alt="Detergente Neutro em Canoas" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105" style="border-radius: 12px; object-fit: cover; width: 100%;">
-                                </div>
-                                
-                                <!-- Slide 2 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/fdf2f8/c20056?text=Desinfetante+Floral" 
-                                         alt="Desinfetante Floral" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
-                                </div>
-
-                                <!-- Slide 3 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/ccfbf1/0f766e?text=Amaciante+5L" 
-                                         alt="Amaciante 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
-                                </div>
-                            </div>
-                            
-                            <!-- Indicadores de Rolagem Visuais (Dots) -->
-                            <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-2 pointer-events-none">
-                                <div class="w-2 h-2 rounded-full bg-brand-pink/80"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
-                            </div>
-                            <!-- Dica de usabilidade para desktop -->
-                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none opacity-0 group-hover:opacity-50 transition-opacity">
-                                <div class="bg-white/80 p-2 rounded-full shadow-sm text-gray-500"><i class="fa-solid fa-chevron-right"></i></div>
-                            </div>
-                        </div>
-
-                        <div class="p-8 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-brand-blue mb-3">Detergentes, Desinfetantes e Dia a Dia</h3>
-                            <p class="text-gray-600 mb-6">Tudo que sua casa ou comércio precisa para se manter cheirosa e higienizada com o melhor custo-benefício.</p>
-                            <ul class="space-y-3 mb-8 text-gray-600 flex-grow">
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Detergentes</strong> eficientes e econômicos</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Desinfetantes perfumados</strong> de longa duração</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Amaciantes</strong> e multiusos</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span>Kits para cozinha e banheiro (rodos e vassouras)</span></li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Categoria 2: Limpeza Pesada (Com Carrossel) -->
+                    <!-- Carrossel Unificado (12 itens) -->
                     <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow flex flex-col h-full relative">
                         
-                        <div class="absolute top-4 right-4 bg-pure-500 text-white text-xs font-bold px-3 py-1 rounded-full z-20 shadow-md">Uso Profissional</div>
+                        <div class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full z-30 shadow-md">Todas as Categorias</div>
 
-                        <!-- Carrossel Nativo Tailwind (Scroll Snap) -->
-                        <div class="relative h-72 w-full overflow-hidden bg-white">
+                        <!-- Carrossel (Container gerenciado via JS) -->
+                        <div class="relative h-80 sm:h-96 w-full overflow-hidden bg-white carousel-container" data-active-color="bg-brand-pink">
+                            
+                            <!-- Controles Manuais (Setas) -->
+                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Anterior">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Próximo">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
                             <!-- Container de Scroll -->
-                            <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <div class="scroll-area flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
                                 
-                                <!-- Slide 1 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/f3f4f6/111827?text=Desengraxante+Industrial" 
-                                         alt="Desengraxante Industrial" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                <!-- Itens do Dia a Dia -->
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/e0f2fe/0284c7?text=Detergente+Neutro" 
+                                         alt="Detergente Neutro" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105 rounded-xl object-cover w-full">
                                 </div>
-                                
-                                <!-- Slide 2 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/f3f4f6/111827?text=Limpa+Porcelanato" 
-                                         alt="Limpa Porcelanato" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/fdf2f8/c20056?text=Desinfetante+Floral" 
+                                         alt="Desinfetante Floral" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/ccfbf1/0f766e?text=Amaciante+5L" 
+                                         alt="Amaciante 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/f3f4f6/374151?text=Agua+Sanitaria" 
+                                         alt="Água Sanitária" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/fef9c3/ca8a04?text=Limpador+Multiuso" 
+                                         alt="Limpador Multiuso" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/dbeafe/2563eb?text=Sabao+em+Po" 
+                                         alt="Sabão em Pó" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
                                 </div>
 
-                                <!-- Slide 3 -->
-                                <div class="snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/600x400/f3f4f6/111827?text=Removedor+de+Cera" 
-                                         alt="Galão Removedor de Cera 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md" style="border-radius: 12px; object-fit: cover; width: 100%;">
+                                <!-- Itens de Limpeza Pesada -->
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/f3f4f6/111827?text=Desengraxante+Industrial" 
+                                         alt="Desengraxante Industrial" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/e5e7eb/374151?text=Limpa+Porcelanato" 
+                                         alt="Limpa Porcelanato" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/fca5a5/991b1b?text=Removedor+de+Cera" 
+                                         alt="Removedor de Cera" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/d1d5db/4b5563?text=Limpa+Pedras" 
+                                         alt="Limpa Pedras" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/bbf7d0/166534?text=Detergente+Clorado" 
+                                         alt="Detergente Clorado" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                </div>
+                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
+                                    <img src="https://placehold.co/800x600/bfdbfe/1d4ed8?text=Alcool+70+Galao" 
+                                         alt="Álcool 70% Galão" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
                                 </div>
                             </div>
                             
-                            <!-- Indicadores de Rolagem Visuais (Dots) -->
-                            <div class="absolute bottom-2 left-0 right-0 flex justify-center gap-2 pointer-events-none">
-                                <div class="w-2 h-2 rounded-full bg-pure-500/80"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
-                                <div class="w-2 h-2 rounded-full bg-gray-300/80"></div>
-                            </div>
-                            <!-- Dica de usabilidade para desktop -->
-                            <div class="absolute inset-y-0 right-2 flex items-center pointer-events-none opacity-0 group-hover:opacity-50 transition-opacity">
-                                <div class="bg-white/80 p-2 rounded-full shadow-sm text-gray-500"><i class="fa-solid fa-chevron-right"></i></div>
+                            <!-- Indicadores de Rolagem Manuais (Dots - 12 Itens) -->
+                            <div class="carousel-dots-container absolute bottom-3 left-0 right-0 flex justify-center flex-wrap gap-2 z-10 px-4">
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 1"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 2"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 3"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 4"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 5"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 6"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 7"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 8"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 9"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 10"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 11"></button>
+                                <button class="carousel-dot w-2 h-2 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none" aria-label="Ir para slide 12"></button>
                             </div>
                         </div>
 
-                        <div class="p-8 flex-grow flex flex-col">
-                            <h3 class="text-2xl font-bold text-brand-blue mb-3">Limpeza Pesada, Pós-Obra e Especializados</h3>
-                            <p class="text-gray-600 mb-6">Produtos concentrados para remoção de sujeiras extremas, indicados para empresas, oficinas e construtoras.</p>
-                            <ul class="space-y-3 mb-8 text-gray-600 flex-grow">
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Desengraxantes</strong> de alta potência (em alta)</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Limpa porcelanato</strong> e limpa pedras</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Removedor de cera</strong> e manchas difíceis</span></li>
-                                <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Detergente concentrado</strong> (Galões de 5L e 20L)</span></li>
-                            </ul>
+                        <div class="p-8 flex-grow flex flex-col gap-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                                
+                                <!-- Coluna 1: Dia a Dia -->
+                                <div>
+                                    <h3 class="text-2xl font-bold text-brand-blue mb-3">Detergentes, Desinfetantes e Dia a Dia</h3>
+                                    <p class="text-gray-600 mb-6">Tudo que sua casa ou comércio precisa para se manter cheirosa e higienizada com o melhor custo-benefício.</p>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Detergentes</strong> eficientes e econômicos</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Desinfetantes perfumados</strong> de longa duração</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span><strong>Amaciantes</strong> e multiusos</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-brand-pink mt-1"></i> <span>Kits para cozinha e banheiro (rodos e vassouras)</span></li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Coluna 2: Limpeza Pesada -->
+                                <div>
+                                    <div class="inline-block bg-pure-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3 shadow-sm">Uso Profissional</div>
+                                    <h3 class="text-2xl font-bold text-brand-blue mb-3">Limpeza Pesada, Pós-Obra e Especializados</h3>
+                                    <p class="text-gray-600 mb-6">Produtos concentrados para remoção de sujeiras extremas, indicados para empresas, oficinas e construtoras.</p>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Desengraxantes</strong> de alta potência (em alta)</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Limpa porcelanato</strong> e limpa pedras</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Removedor de cera</strong> e manchas difíceis</span></li>
+                                        <li class="flex items-start gap-3"><i class="fa-solid fa-check text-pure-500 mt-1"></i> <span><strong>Detergente concentrado</strong> (Galões de 5L e 20L)</span></li>
+                                    </ul>
+                                </div>
+
+                            </div>
                         </div>
                     </div>
 
@@ -468,7 +514,7 @@
                         Avaliações 5 Estrelas
                     </div>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">O que nossos clientes dizem</h2>
-                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Confira a experiência de quem já confia na melhor distribuidora de produtos de limpeza de Canoas.</p>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">Confira a experiência de quem já confia na melhor loja de produtos de limpeza de Canoas.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -491,14 +537,14 @@
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 flex-grow italic">
-                            "Excelente fornecedor! Compramos os desengraxantes industriais e galões de detergente para nossa frota e a qualidade superou nossas expectativas. O atendimento é sempre ágil e a entrega em Canoas é muito eficiente. Com certeza, a melhor distribuidora da região em custo-benefício. Recomendo de olhos fechados!"
+                            "Excelente atendimento! Compramos os desengraxantes industriais e galões de detergente para nossa frota e a qualidade superou nossas expectativas. Com certeza, a melhor loja da região em custo-benefício. Recomendo de olhos fechados!"
                         </p>
                     </div>
 
                     <!-- Avaliação 2: Foco em B2C / Casa, Preços e Atendimento -->
                     <div class="bg-white p-8 rounded-3xl clean-shadow flex flex-col h-full border border-gray-100 transition-transform hover:-translate-y-1">
                         <div class="flex items-center gap-4 mb-5">
-                            <img src="https://placehold.co/100x100/fdf2f8/c20056?text=MC" alt="Mariana Costa" class="w-14 h-14 rounded-full object-cover flex-shrink-0">
+                            <img src="https://placehold.co/100x100/fdf2f8/c20056?text=MC" alt="Mariana Costa" width="100" height="100" loading="lazy" class="w-14 h-14 rounded-full object-cover flex-shrink-0">
                             <div>
                                 <h3 class="font-bold text-gray-900 leading-tight">Mariana Costa</h3>
                                 <div class="flex text-brand-gold text-sm mt-1">
@@ -531,7 +577,7 @@
                             </div>
                         </div>
                         <p class="text-gray-600 mb-6 flex-grow italic">
-                            "Sou síndico de um condomínio e encontrei na Magia da Limpeza a parceira ideal. Têm uma linha completa, com produtos de alta qualidade, desde o uso diário até a limpeza pesada. A confiança e a credibilidade profissional que passam são fundamentais. Recomendo fortemente!"
+                            "Sou síndico de um condomínio e encontrei na Magia da Limpeza a loja ideal. Têm uma linha completa, com produtos de alta qualidade, desde o uso diário até a limpeza pesada. A confiança e a credibilidade profissional que passam são fundamentais. Recomendo fortemente!"
                         </p>
                     </div>
 
@@ -548,7 +594,7 @@
             </div>
         </section>
 
-        <!-- Seção Localização (Foco em Distribuidora e Loja) -->
+        <!-- Seção Localização (Foco em Loja Física) -->
         <section id="localizacao" class="py-20 bg-brand-blue text-white relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
                 <i class="fa-solid fa-soap absolute text-9xl -top-10 -left-10 text-brand-pink"></i>
@@ -560,10 +606,10 @@
                     
                     <div>
                         <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-pink-300 font-semibold text-sm mb-6 border border-white/20">
-                            <i class="fa-solid fa-truck-fast"></i>
-                            Varejo e Atacado Local
+                            <i class="fa-solid fa-shop"></i>
+                            Sua Loja Física
                         </div>
-                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua Loja de Produtos de Limpeza em Canoas RS</h2>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6">Sua Loja Física de Limpeza em Canoas, RS</h2>
                         <p class="text-blue-100 text-lg mb-8">
                             Venha conferir nossa variedade de perto. Fornecemos soluções tanto para sua casa quanto para abastecer sua empresa com galões econômicos.
                         </p>
@@ -612,32 +658,32 @@
             <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-12">
                     <h2 class="text-3xl font-bold text-gray-900 mb-4">Dúvidas Frequentes (FAQ)</h2>
-                    <p class="text-gray-600">Respostas rápidas sobre fornecimento, detergentes e limpeza pesada em Canoas.</p>
+                    <p class="text-gray-600">Respostas rápidas sobre fornecimento, soluções industriais e conservação em Canoas.</p>
                 </div>
 
                 <div class="space-y-6">
                     <!-- FAQ 1 -->
                     <div class="bg-white p-6 rounded-2xl clean-shadow border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Onde comprar detergente e desinfetante em Canoas RS?</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Onde encontrar produtos profissionais de limpeza em Canoas?</h3>
                         <p class="text-gray-700 leading-relaxed">
                             Nossa loja física está localizada na região central de <strong>Canoas, RS</strong>. 
-                            Oferecemos a maior variedade de detergentes, desinfetantes perfumados e amaciantes da região, com fácil acesso e estacionamento para clientes.
+                            Oferecemos desde soluções para o dia a dia até a linha industrial, com fácil acesso e estacionamento para clientes.
                         </p>
                     </div>
 
                     <!-- FAQ 2 -->
                     <div class="bg-white p-6 rounded-2xl clean-shadow border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Vocês atuam como distribuidora de produtos de limpeza em Canoas RS?</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">Vocês atendem empresas e condomínios em Canoas RS?</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Sim! Além do varejo para a sua casa, atuamos como <strong>fornecedores e distribuidora</strong> de produtos de limpeza para empresas, condomínios, clínicas e indústrias em Canoas, com condições facilitadas para atacado.
+                            Sim! Além do varejo para a sua casa, nossa loja fornece insumos de higiene para empresas, condomínios, clínicas e indústrias, com excelentes opções de tamanhos econômicos e atacado.
                         </p>
                     </div>
 
                     <!-- FAQ 3 -->
                     <div class="bg-white p-6 rounded-2xl clean-shadow border border-gray-100">
-                        <h3 class="text-xl font-bold text-gray-900 mb-2">Vocês vendem produtos de limpeza pesada e desengraxante para empresas?</h3>
+                        <h3 class="text-xl font-bold text-gray-900 mb-2">A loja possui linha para limpeza pesada e desengraxantes?</h3>
                         <p class="text-gray-700 leading-relaxed">
-                            Com certeza. Temos uma linha profissional completa que inclui <strong>desengraxante</strong> de alta performance, detergente concentrado em galões de 5L e 20L, limpa porcelanato, limpa pedras e removedor de cera.
+                            Com certeza. Temos uma linha profissional completa de alta performance, incluindo <strong>desengraxantes</strong> e removedores, ideal para oficinas, construtoras e remoção de sujeiras extremas.
                         </p>
                     </div>
                 </div>
@@ -658,7 +704,7 @@
                         <span class="font-extrabold text-2xl tracking-tighter text-brand-pink">limpeza</span>
                     </a>
                     <p class="text-gray-600 mb-6 max-w-sm">
-                        Sua loja contra a sujeira. Produtos de limpeza pesada, detergentes e linha profissional no coração de Canoas, RS.
+                        Especialistas em higiene e conservação. Oferecemos desde itens básicos até soluções para limpeza pesada no coração de Canoas, RS.
                     </p>
                     <div class="flex space-x-4">
                         <a href="#" class="w-10 h-10 rounded-full bg-pink-50 text-brand-pink flex items-center justify-center hover:bg-brand-pink hover:text-white transition-colors" aria-label="Instagram">
@@ -709,68 +755,133 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
-    <!-- Script para animação automática dos carrosséis -->
+    <!-- Lógica de interações da página -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const carousels = document.querySelectorAll('.snap-x.snap-mandatory');
+            
+            // --- Script aprimorado de controle do Carrossel (Manual e Automático) ---
+            const carousels = document.querySelectorAll('.carousel-container');
             
             carousels.forEach(carousel => {
-                let scrollAmount = 0;
-                let direction = 1; // 1 para direita, -1 para esquerda
-                const slideWidth = carousel.clientWidth;
+                const scrollArea = carousel.querySelector('.scroll-area');
+                const slides = carousel.querySelectorAll('.carousel-slide');
+                const dots = carousel.querySelectorAll('.carousel-dot');
+                const prevBtn = carousel.querySelector('.carousel-prev');
+                const nextBtn = carousel.querySelector('.carousel-next');
                 
-                setInterval(() => {
-                    const maxScrollLeft = carousel.scrollWidth - carousel.clientWidth;
-                    
-                    // Atualiza a quantidade de scroll
-                    scrollAmount += slideWidth * direction;
-                    
-                    // Inverte a direção se chegar ao fim ou ao início
-                    if (scrollAmount >= maxScrollLeft) {
-                        scrollAmount = maxScrollLeft;
-                        direction = -1; // Volta para o início (ou rola para trás se preferir)
-                        // Para voltar instantaneamente ao início, descomente as linhas abaixo e comente as duas acima:
-                        // scrollAmount = 0; 
-                        // direction = 1;
-                    } else if (scrollAmount <= 0) {
-                        scrollAmount = 0;
-                        direction = 1;
-                    }
+                // Pega a cor ativa configurada no HTML via 'data-active-color' (ex: bg-brand-pink ou bg-pure-500)
+                const activeColor = carousel.getAttribute('data-active-color') || 'bg-brand-pink';
+                
+                let currentIndex = 0;
+                let autoPlayInterval;
 
-                    carousel.scrollTo({
-                        top: 0,
-                        left: scrollAmount,
+                // Atualiza visualmente as bolinhas (dots)
+                const updateDots = (index) => {
+                    dots.forEach((dot, i) => {
+                        if(i === index) {
+                            dot.classList.add(activeColor, 'w-4');
+                            dot.classList.remove('bg-gray-300/80', 'w-2');
+                        } else {
+                            dot.classList.add('bg-gray-300/80', 'w-2');
+                            dot.classList.remove(activeColor, 'w-4');
+                        }
+                    });
+                };
+
+                // Move o scroll para o slide exato
+                const goToSlide = (index) => {
+                    if (index < 0) index = slides.length - 1;
+                    if (index >= slides.length) index = 0;
+                    
+                    currentIndex = index;
+                    
+                    // A largura do container de scroll nos dá quanto temos que rolar
+                    const slideWidth = scrollArea.clientWidth;
+                    scrollArea.scrollTo({
+                        left: slideWidth * currentIndex,
                         behavior: 'smooth'
                     });
-                }, 3000); // Rola a cada 3 segundos
+                    
+                    updateDots(currentIndex);
+                };
+
+                const nextSlide = () => goToSlide(currentIndex + 1);
+                const prevSlide = () => goToSlide(currentIndex - 1);
+
+                // Configurar Auto-Play
+                const startAutoPlay = () => {
+                    autoPlayInterval = setInterval(nextSlide, 3500);
+                };
+
+                const resetAutoPlay = () => {
+                    clearInterval(autoPlayInterval);
+                    startAutoPlay();
+                };
+
+                // Listeners dos Botões de Seta
+                if(nextBtn) {
+                    nextBtn.addEventListener('click', () => {
+                        nextSlide();
+                        resetAutoPlay();
+                    });
+                }
+                if(prevBtn) {
+                    prevBtn.addEventListener('click', () => {
+                        prevSlide();
+                        resetAutoPlay();
+                    });
+                }
+
+                // Listeners das Bolinhas (Dots)
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                        resetAutoPlay();
+                    });
+                });
+
+                // Atualiza o dot ativo se o usuário rolar manualmente com o dedo (Mobile)
+                scrollArea.addEventListener('scroll', () => {
+                    const scrollPosition = scrollArea.scrollLeft;
+                    const slideWidth = scrollArea.clientWidth;
+                    // Calcula em qual slide estamos baseando-se na posição do scroll
+                    const newIndex = Math.round(scrollPosition / slideWidth);
+                    
+                    if(newIndex !== currentIndex && newIndex >= 0 && newIndex < slides.length) {
+                        currentIndex = newIndex;
+                        updateDots(currentIndex);
+                    }
+                }, { passive: true });
+
+                // Inicia o carrossel na posição 0
+                updateDots(0);
+                startAutoPlay();
             });
-        });
 
-        // Lógica do Menu Mobile
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuIcon = mobileMenuButton.querySelector('i');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
+            // --- Lógica do Menu Mobile ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuIcon = mobileMenuButton.querySelector('i');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
 
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-            
-            // Alterna o ícone entre hambúrguer e X
-            if (mobileMenu.classList.contains('hidden')) {
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
-            } else {
-                mobileMenuIcon.classList.remove('fa-bars');
-                mobileMenuIcon.classList.add('fa-xmark');
-            }
-        });
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                
+                if (mobileMenu.classList.contains('hidden')) {
+                    mobileMenuIcon.classList.remove('fa-xmark');
+                    mobileMenuIcon.classList.add('fa-bars');
+                } else {
+                    mobileMenuIcon.classList.remove('fa-bars');
+                    mobileMenuIcon.classList.add('fa-xmark');
+                }
+            });
 
-        // Fecha o menu automaticamente ao clicar em um link
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                mobileMenuIcon.classList.remove('fa-xmark');
-                mobileMenuIcon.classList.add('fa-bars');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuIcon.classList.remove('fa-xmark');
+                    mobileMenuIcon.classList.add('fa-bars');
+                });
             });
         });
     </script>
