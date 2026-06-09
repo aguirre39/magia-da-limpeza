@@ -28,13 +28,21 @@
     <link rel="canonical" href="https://www.magiadalimpeza.com.br/" />
     
     <!-- Google Analytics 4 (GA4) - Recomendado no Checklist SEO Técnico -->
-    <!-- Substitua G-XXXXXXXXXX pelo seu ID de medição -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <!-- Carregamento atrasado (Lazy Load) para evitar bloqueio de thread e JS não utilizado no Lighthouse -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
+      document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          var gtagScript = document.createElement('script');
+          gtagScript.src = "https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX";
+          gtagScript.async = true;
+          document.head.appendChild(gtagScript);
+          
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-XXXXXXXXXX');
+        }, 3500); // Atraso de 3.5s para garantir que não afeta as métricas iniciais de carregamento
+      });
     </script>
 
     <!-- Hreflang para sinalizar idioma e região correta (pt-BR conforme ISO 3166-1 Alpha 2) -->
@@ -222,7 +230,7 @@
             <div class="flex justify-between items-center h-24 md:h-28">
                 <!-- Logo com Identidade Visual -->
                 <a href="#" class="flex items-center" aria-label="Página Inicial Magia da Limpeza">
-                    <img src="img/logo-magia-da-limpeza.webp" alt="Logo Magia da Limpeza" class="h-16 md:h-20 w-auto object-contain">
+                    <img src="img/logo-magia-da-limpeza.webp" alt="Logo Magia da Limpeza" class="h-16 md:h-20 w-auto object-contain" width="200" height="80">
                 </a>
                 
                 <!-- CTA do Header -->
