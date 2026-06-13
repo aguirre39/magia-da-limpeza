@@ -307,7 +307,7 @@
                     <!-- Imagem Hero com a Identidade Visual Ajustada (Mais limpa e profissional) -->
                     <div class="relative mx-auto w-full max-w-lg lg:max-w-xl flex justify-center mt-8 lg:mt-0">
                         <!-- O background bagunçado foi removido para focar na limpeza da imagem com uma sombra profunda -->
-                        <img src="img/loja-de-produtos-de-limpeza-magia-da-limpeza-canoas.webp" 
+                        <img src="img/loja-produtos-limpeza-canoas-rs-vitrine-magia-da-limpeza.webp" 
                              alt="Identidade Visual Magia da Limpeza Canoas - Produtos de Limpeza" 
                              class="rounded-[2.5rem] shadow-[0_20px_60px_-15px_rgba(11,22,86,0.3)] w-full object-cover transition-transform duration-700 hover:scale-[1.02]"
                              width="600"
@@ -363,7 +363,7 @@
             </div>
         </section>
 
-        <!-- Seção de Produtos Unificada -->
+         <!-- Seção de Produtos Unificada -->
         <section id="produtos" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="text-center mb-16">
@@ -373,80 +373,91 @@
 
                 <div class="max-w-4xl mx-auto">
                     
-                    <!-- Carrossel Unificado (12 itens) -->
+                    <!-- Carrossel Unificado -->
                     <div class="group rounded-3xl bg-gray-50 overflow-hidden border border-gray-100 transition-all hover:clean-shadow flex flex-col h-full relative">
                         
                         <div class="absolute top-4 right-4 bg-brand-blue text-white text-xs font-bold px-3 py-1 rounded-full z-30 shadow-md">Todas as Categorias</div>
 
-                        <!-- Carrossel (Container gerenciado via JS) -->
-                        <div class="relative h-80 sm:h-96 w-full overflow-hidden bg-white carousel-container" data-active-color="bg-brand-pink">
+                        <!-- Carrossel (Container gerenciado via JS ajustado para layout vertical com flex-col) -->
+                        <div class="relative w-full bg-white carousel-container flex flex-col rounded-t-3xl" data-active-color="bg-brand-pink">
                             
-                            <!-- Controles Manuais (Setas) -->
-                            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Anterior">
-                                <i class="fa-solid fa-chevron-left"></i>
-                            </button>
-                            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Próximo">
-                                <i class="fa-solid fa-chevron-right"></i>
-                            </button>
-
-                            <!-- Container de Scroll -->
-                            <div class="scroll-area flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full pb-4" style="scrollbar-width: none; -ms-overflow-style: none;">
+                            <!-- Wrapper das imagens e setas -->
+                            <!-- AUMENTADA A ALTURA E USANDO ASPECT-RATIO PARA ADAPTAR MELHOR AS IMAGENS QUADRADAS -->
+                            <div class="relative w-full overflow-hidden aspect-square sm:aspect-video md:h-[500px]">
                                 
-                                <!-- Itens do Dia a Dia -->
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/e0f2fe/0284c7?text=Detergente+Neutro" 
-                                         alt="Detergente Neutro" loading="lazy" class="h-full w-auto object-contain drop-shadow-md transition-transform duration-500 group-hover:scale-105 rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/fdf2f8/c20056?text=Desinfetante+Floral" 
-                                         alt="Desinfetante Floral" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/ccfbf1/0f766e?text=Amaciante+5L" 
-                                         alt="Amaciante 5L" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/f3f4f6/374151?text=Agua+Sanitaria" 
-                                         alt="Água Sanitária" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/fef9c3/ca8a04?text=Limpador+Multiuso" 
-                                         alt="Limpador Multiuso" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/dbeafe/2563eb?text=Sabao+em+Po" 
-                                         alt="Sabão em Pó" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
+                                <!-- Controles Manuais (Setas) -->
+                                <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Anterior">
+                                    <i class="fa-solid fa-chevron-left"></i>
+                                </button>
+                                <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 z-20 w-10 h-10 flex items-center justify-center bg-white/90 text-gray-800 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-all duration-300 hover:bg-white hover:scale-110 focus:outline-none" aria-label="Próximo">
+                                    <i class="fa-solid fa-chevron-right"></i>
+                                </button>
 
-                                <!-- Itens de Limpeza Pesada -->
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/f3f4f6/111827?text=Desengraxante+Industrial" 
-                                         alt="Desengraxante Industrial" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/e5e7eb/374151?text=Limpa+Porcelanato" 
-                                         alt="Limpa Porcelanato" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/fca5a5/991b1b?text=Removedor+de+Cera" 
-                                         alt="Removedor de Cera" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/d1d5db/4b5563?text=Limpa+Pedras" 
-                                         alt="Limpa Pedras" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/bbf7d0/166534?text=Detergente+Clorado" 
-                                         alt="Detergente Clorado" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
-                                </div>
-                                <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4">
-                                    <img src="https://placehold.co/800x600/bfdbfe/1d4ed8?text=Alcool+70+Galao" 
-                                         alt="Álcool 70% Galão" loading="lazy" class="h-full w-auto object-contain drop-shadow-md rounded-xl object-cover w-full">
+                                <!-- Container de Scroll -->
+                                <div class="scroll-area flex overflow-x-auto snap-x snap-mandatory hide-scrollbar w-full h-full" style="scrollbar-width: none; -ms-overflow-style: none;">
+                                    
+                                    <!-- Itens do Dia a Dia -->
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <!-- SUBSTITUÍDO object-cover POR object-contain EM TODAS AS IMAGENS -->
+                                        <img src="img/amaciante-de-roupas-pramim-alquimis-5l-canoas.webp" 
+                                             alt="Amaciante de Roupas Pramim Alquimis 5L - Roupas macias e perfumadas" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/alvejante-sem-cloro-pramim-alquimis.webp" 
+                                             alt="Alvejante sem Cloro Pramim 5L - Remove manchas de roupas brancas e coloridas" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/multiuso-limpeza-geral-fresh-alquimis.webp" 
+                                             alt="Multiuso Limpeza Geral Fresh Alquimis 5L - Seu maior aliado na limpeza geral" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/limpa-vidros-profissional-alquimis.webp" 
+                                             alt="Limpa Vidros Alquimis 5L - Limpeza prática e sem manchas" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/detergente-limpa-pisos-reflex-alquimis.webp" 
+                                             alt="Detergente Limpa Pisos Reflex Especial para Porcelanatos - O brilho e proteção que seu piso precisa" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/aromatizante-ambiental-alquimis-5l-canoas.webp" 
+                                             alt="Aromatizante Ambiental Concentrado Alquimis 5L - Transforme seu ambiente" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    
+
+                                    <!-- Itens de Limpeza Pesada -->
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/desengraxante-industrial-neutro-alk150-alquimis.webp" 
+                                             alt="Desengraxante Industrial Neutro ALK150 Alquimis - Ideal para limpeza e higienização de diversas superfícies" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/multiuso-limpeza-pesada-alquimis.webp" 
+                                             alt="Multiuso Limpeza Pesada Alquimis 5L - Limpeza prática e eficiente" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/acabamento-acrilico-pisos-reflex-alquimis.webp" 
+                                             alt="Reflex Acabamento Acrílico para Pisos ALK 13 - Confere alta resistência ao tráfego" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/limpador-placas-solares-fotovoltaicas-alk500.webp" 
+                                             alt="Limpador Especial Conservação de Placas Fotovoltaicas ALK500 - Limpa sem agredir as placas" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/limpa-inox-profissional-alquimis.webp" 
+                                             alt="Limpa Inox Profissional Alquimis - Limpa o inox e promove brilho" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/desinfetante-banheiro-quimico-bactersani-alquimis.webp" 
+                                             alt="Desinfetante concentrado para banheiros químicos Bactersani Alquimis 5L" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
+                                    <div class="carousel-slide snap-center shrink-0 w-full h-full relative flex justify-center p-4 md:p-8">
+                                        <img src="img/multi-detergente-concentrado-aq135-alquimis.webp" 
+                                             alt="AQ135 Multi Detergente Concentrado Alquimis para Limpeza Profissional e Cozinhas" loading="lazy" class="h-full w-full object-contain drop-shadow-md rounded-xl transition-transform duration-500 group-hover:scale-105">
+                                    </div>
                                 </div>
                             </div>
-                            
-                            <!-- Indicadores de Rolagem Manuais (Dots - 12 Itens) -->
-                            <div class="carousel-dots-container absolute bottom-3 left-0 right-0 flex justify-center flex-wrap gap-2 z-10 px-4">
+
+                            <!-- Indicadores de Rolagem Manuais (Dots) - Agora Relativos e fora da imagem -->
+                            <div class="carousel-dots-container relative flex justify-center flex-wrap gap-2 z-10 px-4 pt-2 pb-6 w-full">
                                 <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 1"></button>
                                 <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 2"></button>
                                 <button class="carousel-dot box-content w-2 h-2 p-4 rounded-full transition-all duration-300 bg-gray-300/80 hover:bg-gray-400 focus:outline-none bg-clip-content" aria-label="Ir para slide 3"></button>
@@ -633,6 +644,72 @@
             </div>
         </section>
 
+        <!-- NOVA SEÇÃO: Galeria da Loja (Foco em E-E-A-T e Local SEO) -->
+        <section id="galeria" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-50 text-brand-pink font-semibold text-sm mb-4 border border-pink-100">
+                        <i class="fa-solid fa-camera"></i>
+                        Conheça Nosso Espaço
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brand-blue mb-4">Estrutura Completa em Canoas</h2>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                        Amplo estoque, e atendimento especializado esperando por você.
+                    </p>
+                </div>
+
+                <!-- Grid de Fotos Estilo Mosaico (Bento Grid) -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[200px] md:auto-rows-[250px]">
+                    
+                    <!-- Foto 1: Fachada (Destaque Principal) - Ocupa 2 colunas e 2 linhas no desktop -->
+                    <figure class="col-span-2 md:col-span-2 md:row-span-2 group relative rounded-3xl overflow-hidden clean-shadow">
+                        <img src="img/loja-de-produtos-de-limpeza-magia-da-limpeza-canoas.webp" 
+                             alt="Fachada da loja Magia da Limpeza em Canoas, com fácil acesso e estacionamento" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <figcaption class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-brand-blue/90 to-transparent p-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <span class="text-white font-bold text-lg">Nossa Loja na Rua Monte Castelo</span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- Foto 2: Prateleiras / Corredor interno -->
+                    <figure class="col-span-2 md:col-span-2 group relative rounded-3xl overflow-hidden clean-shadow">
+                        <img src="img/prateleira-produtos-limpeza-detergente-magia-da-limpeza-canoas.webp" 
+                             alt="Prateleiras abastecidas com detergentes em Canoas" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <figcaption class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-brand-blue/90 to-transparent p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <span class="text-white font-semibold">Linha completa de Uso Diário</span>
+                        </figcaption>
+                    </figure>
+
+                    <!-- Foto 3: Vitrine Interna / Organização -->
+                    <figure class="col-span-1 md:col-span-1 group relative rounded-3xl overflow-hidden clean-shadow">
+                        <img src="img/vitrine-interna-loja-magia-da-limpeza-canoas.webp" 
+                             alt="Visão interna da vitrine da Magia da Limpeza em Canoas, com galões de produtos e kits em exposição" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <!-- Adicionei um figcaption opcional caso queira mostrar um texto ao passar o mouse -->
+                        <figcaption class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-brand-blue/90 to-transparent p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <span class="text-white font-semibold text-sm">Produtos prontos para levar</span>
+                        </figcaption>
+                    </figure>
+
+                     <!-- Foto 4: Produtos Industriais / Desengraxantes -->
+                    <figure class="col-span-1 md:col-span-1 group relative rounded-3xl overflow-hidden clean-shadow">
+                        <img src="img/galao-limpeza-pesada-magia-da-limpesa.webp" 
+                             alt="Estoque de galões para limpeza pesada e uso industrial" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                        <figcaption class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-brand-blue/90 to-transparent p-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                            <span class="text-white font-semibold text-sm">Linha Limpeza Pesada</span>
+                        </figcaption>
+                    </figure>
+
+                </div>
+            </div>
+        </section>
+
         <!-- Seção Localização (Foco em Loja Física) -->
         <section id="localizacao" class="py-20 bg-brand-blue text-white relative overflow-hidden">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden opacity-10 pointer-events-none">
@@ -749,9 +826,9 @@
 
     <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 mb-12">
                 
-                <div class="col-span-1 md:col-span-2">
+                <div class="sm:col-span-2 lg:col-span-4">
                     <a href="#" class="flex items-center gap-1 mb-4" aria-label="Magia da Limpeza">
                         <i class="fa-solid fa-wand-magic-sparkles text-brand-gold text-2xl mr-1"></i>
                         <span class="font-extrabold text-2xl tracking-tighter text-brand-blue">Magia</span>
@@ -774,7 +851,7 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="lg:col-span-3">
                     <h3 class="font-bold text-gray-900 mb-4 uppercase tracking-wider text-sm">Categorias</h3>
                     <ul class="space-y-3">
                         <li><a href="#produtos" class="text-gray-600 hover:text-clean-600 transition-colors">Detergentes e Dia a Dia</a></li>
@@ -783,7 +860,25 @@
                     </ul>
                 </div>
 
-                <div>
+                <div class="lg:col-span-2">
+                    <h3 class="font-bold text-gray-900 mb-4 uppercase tracking-wider text-sm">Marcas Parceiras</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <a href="https://www.3m.com.br/3M/pt_BR/3m-do-brasil/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-2 transition-colors" aria-label="Visitar site da 3M do Brasil">
+                                <!-- SVG Oficial e Proporcional da 3M -->
+                                
+                                <span class="font-bold text-brand-pink text-lg tracking-tight group-hover:text-pink-700">3M do Brasil</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://alquimis.com.br/" target="_blank" rel="noopener noreferrer" class="group flex items-center gap-3 text-gray-600 hover:text-brand-pink transition-colors" aria-label="Visitar site oficial da Alquimis">
+                                <span class="text-[#0b1656] text-2xl font-extrabold italic tracking-tighter flex-shrink-0 transition-transform group-hover:scale-110">Alquimis</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sm:col-span-2 lg:col-span-3">
                     <h3 class="font-bold text-gray-900 mb-4 uppercase tracking-wider text-sm">Contato</h3>
                     <ul class="space-y-3 text-gray-600">
                         <li class="flex items-center gap-2"><i class="fa-solid fa-phone text-brand-pink w-4"></i> (51) 98205-7088</li>
